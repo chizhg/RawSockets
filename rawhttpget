@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# warning message when input params are erroneous
+usage="usage: rawhttpget [URL]"
+
+if [ $# -ne 1 ]
+then
+    echo "rawhttpget: num of params should be 1"
+    echo $usage
+    exit -1
+fi
+
+url="$1"
+
+# start the client
+sudo python main.py $url
